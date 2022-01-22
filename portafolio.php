@@ -2,5 +2,4 @@
 
 hola, soy el portafolio
 
-</body>
-</html>
+<?php include("pie.php"); ?>

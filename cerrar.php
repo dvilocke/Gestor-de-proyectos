@@ -1,7 +1,5 @@
 <?php include("cabecera.php"); ?>
 
-
 Hola soy Salir
 
-</body>
-</html>
+<?php include("pie.php"); ?>
