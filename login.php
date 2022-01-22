@@ -1,3 +1,19 @@
+<?php
+session_start();
+if($_POST){
+    if($_POST["usuario"] == "miguel" && $_POST["clave"] == "123"){
+        $_SESSION["login"] = true;
+        #para redireccionar
+        header("location:index.php");
+    }else{
+        #puedo mezclar php con js
+        echo "<script> alert('usuario o clave incorrecta') </script>";
+    }
+}
+
+?>
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -25,7 +41,7 @@
             <form action="login.php" method="post">
                 Usuario:<input class="form-control" type="text" name="usuario" id="">
                 <br/>
-                Contraseña: <input class="form-control" type="text" name="clave" id="">
+                Contraseña: <input class="form-control" type="password" name="clave" id="">
                 <br/>
                 
                 <button class="btn btn-success" type="submit">Entrar al portafolio</button>
@@ -38,7 +54,6 @@
             </div>
 
         </div>
-
 
   </div>
 

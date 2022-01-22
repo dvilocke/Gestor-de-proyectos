@@ -1,5 +1,5 @@
-<?php include("cabecera.php"); ?>
-
-Hola soy Salir
-
-<?php include("pie.php"); ?>
+<?php
+session_start();
+session_destroy();
+header("location:login.php");
+?>
